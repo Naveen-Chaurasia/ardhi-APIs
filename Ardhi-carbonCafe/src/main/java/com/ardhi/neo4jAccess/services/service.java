@@ -11,10 +11,10 @@ import com.ardhi.neo4jAccess.Entities.Category;
 import com.ardhi.neo4jAccess.Entities.ProductComponents;
 import com.ardhi.neo4jAccess.Entities.Products;
 import com.ardhi.neo4jAccess.repositories.CategoryRepo;
-import com.ardhi.neo4jAccess.repositories.Level0repo;
+import com.ardhi.neo4jAccess.repositories.Level0Repo;
 import com.ardhi.neo4jAccess.repositories.Level1Repo;
-import com.ardhi.neo4jAccess.repositories.productComponentsRepo;
-import com.ardhi.neo4jAccess.repositories.productRepo;
+import com.ardhi.neo4jAccess.repositories.ProductComponentsRepo;
+import com.ardhi.neo4jAccess.repositories.ProductRepo;
 
 @Service
 public class service {
@@ -22,11 +22,11 @@ public class service {
 	@Autowired
 	CategoryRepo cr;
 	@Autowired
-	productRepo pr;
+	ProductRepo pr;
 	@Autowired
-	productComponentsRepo pcr;
+	ProductComponentsRepo pcr;
 	@Autowired
-	Level0repo l0r;
+	Level0Repo l0r;
 	
 	@Autowired
 	Level1Repo l1r;

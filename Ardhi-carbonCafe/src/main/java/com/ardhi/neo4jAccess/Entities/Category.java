@@ -1,5 +1,4 @@
 package com.ardhi.neo4jAccess.Entities;
-
 import java.util.HashSet;
 import java.util.Set;
 

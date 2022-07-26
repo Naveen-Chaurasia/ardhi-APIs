@@ -1,10 +1,16 @@
 package com.ardhi.neo4jAccess.Entities;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
+import org.springframework.data.neo4j.core.schema.Relationship.Direction;
 
 
 @Node
+
 public class ProductComponents {
 	@Id @GeneratedValue 
 	private Long id;
@@ -24,6 +30,8 @@ public class ProductComponents {
 	private String other_contents;
 	private String total_mass;
 	
+	@Relationship(type="component_of", direction = Direction.INCOMING)
+	private Set<ProductComponents> productComponents=new HashSet<>();
 	
 	public String getLi_ion_Battery_Content() {
 		return Li_ion_Battery_Content;

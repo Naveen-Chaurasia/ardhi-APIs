@@ -12,7 +12,7 @@ import com.ardhi.neo4jAccess.Entities.Products;
 //}
 
 @RepositoryRestResource(collectionResourceRel = "products", path = "products")
-public interface productRepo extends  PagingAndSortingRepository<Products, Long> {
+public interface ProductRepo extends  PagingAndSortingRepository<Products, Long> {
 	//Mono<Category> findByName(String name);
 
 }

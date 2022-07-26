@@ -12,16 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 		
 	
-	@RequestMapping(value = "/products", method = RequestMethod.GET)
-	   public List<String> getProducts() {
-	      List<String> productsList = new ArrayList<>();
-	      productsList.add("Honey");
-	      productsList.add("Almond");
-	      return productsList;
-	   }
-	   @RequestMapping(value = "/products", method = RequestMethod.POST)
-	   public String createProduct() {
-	      return "Product is saved successfully";
-	   }
+	
 
 }

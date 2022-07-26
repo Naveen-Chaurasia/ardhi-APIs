@@ -2,9 +2,14 @@ package com.ardhi.neo4jAccess.Entities;
 
 
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
+import org.springframework.data.neo4j.core.schema.Relationship.Direction;
 
 
 @Node
@@ -17,6 +22,10 @@ public class Level1 {
 	private String ReuseByRecyclePercentage;
 	private String Toxicity;
 	private String Water;
+	
+	
+	@Relationship(type="HAS_SUBMATERIAL", direction = Direction.OUTGOING)
+	private Set<ProductComponents> productComponents=new HashSet<>();	
 	
 		
 	public String  getCarbonEmission() {

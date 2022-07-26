@@ -14,7 +14,7 @@ import com.ardhi.neo4jAccess.Entities.ProductComponents;
 //}
 
 @RepositoryRestResource(collectionResourceRel = "productComponents", path = "productComponents")
-public interface  productComponentsRepo extends  PagingAndSortingRepository<ProductComponents, Long> {
+public interface  ProductComponentsRepo extends  PagingAndSortingRepository<ProductComponents, Long> {
 	//Mono<Category> findByName(String name);
 
 }
