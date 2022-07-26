@@ -1,13 +1,8 @@
 package com.ardhi.neo4jAccess.Entities;
-
-import java.util.HashSet;
-import java.util.Set;
-
-import org.neo4j.cypherdsl.core.Relationship.Direction;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
-import org.springframework.data.neo4j.core.schema.Relationship;
+
 
 @Node
 public class ProductComponents {
