@@ -25,7 +25,7 @@ public class Level1 {
 	
 	
 	@Relationship(type="HAS_SUBMATERIAL", direction = Direction.OUTGOING)
-	private Set<ProductComponents> productComponents=new HashSet<>();	
+	private Set<Level2> Level2=new HashSet<>();	
 	
 		
 	public String  getCarbonEmission() {
