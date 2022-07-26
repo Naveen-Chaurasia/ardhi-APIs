@@ -19,7 +19,7 @@ public class Level2 {
 	}
 	
 	@Relationship(type="PRESENT_IN", direction = Direction.INCOMING)
-	private Set<Level2> Level2=new HashSet<>();	
+	private Set<Level3> Level3=new HashSet<>();	
 	
 	
 	public void setId(Long id) {

@@ -22,8 +22,17 @@ public class Level1 {
 	private String ReuseByRecyclePercentage;
 	private String Toxicity;
 	private String Water;
+	private String Material;
 	
 	
+	public String getMaterial() {
+		return Material;
+	}
+
+	public void setMaterial(String material) {
+		Material = material;
+	}
+
 	@Relationship(type="HAS_SUBMATERIAL", direction = Direction.OUTGOING)
 	private Set<Level2> Level2=new HashSet<>();	
 	

@@ -8,7 +8,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -35,4 +37,15 @@ public class Neo4jAccessApplication {
 	  public InternalResourceViewResolver defaultViewResolver() {
 	    return new InternalResourceViewResolver();
 	  }
+	 @Bean
+     public ApiInfo getApiInfo() {
+
+       return new ApiInfoBuilder()
+               .title("Ardhi Carbon Cafe API Doc")
+               .description("More description about the API")
+               .version("1.0.0")
+               .build();
+   }
+	 
+	 
 }
