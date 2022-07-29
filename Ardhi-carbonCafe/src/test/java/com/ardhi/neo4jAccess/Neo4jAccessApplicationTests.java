@@ -1,4 +1,4 @@
-package com.naveen.neo4jAccess;
+package com.ardhi.neo4jAccess;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
