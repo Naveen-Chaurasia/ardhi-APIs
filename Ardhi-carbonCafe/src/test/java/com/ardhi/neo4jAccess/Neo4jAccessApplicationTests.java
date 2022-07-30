@@ -70,6 +70,7 @@ class Neo4jAccessApplicationTests {
 	      assertEquals(200, status);
 
 	   }
+	 
 	 @Test
 	   public void getLevel2GFRP() throws Exception {
 		 DefaultMockMvcBuilder builder = MockMvcBuilders.webAppContextSetup(this.wac);
