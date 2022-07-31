@@ -13,9 +13,9 @@ public class Level0 {
 	@Id @GeneratedValue 
 	private Long id;
 	private Double CarbonEmission;
-	private String Energy;
-	private String ReuseByRecyclePercentage;
-	private String Toxicity;
+	private Double Energy;
+	private Double ReuseByRecyclePercentage;
+	private Double Toxicity;
 	private Double Water;
 	
 	@Relationship(type="HAS_MATERIAL", direction = Direction.OUTGOING)
@@ -29,28 +29,38 @@ public class Level0 {
 		CarbonEmission = carbonEmission;
 	}
 
-	public String getEnergy() {
+	
+
+	public Double getEnergy() {
 		return Energy;
 	}
 
-	public void setEnergy(String energy) {
+	public void setEnergy(Double energy) {
 		Energy = energy;
 	}
 
-	public String getReuseByRecyclePercentage() {
+	public Double getReuseByRecyclePercentage() {
 		return ReuseByRecyclePercentage;
 	}
 
-	public void setReuseByRecyclePercentage(String reuseByRecyclePercentage) {
+	public void setReuseByRecyclePercentage(Double reuseByRecyclePercentage) {
 		ReuseByRecyclePercentage = reuseByRecyclePercentage;
 	}
 
-	public String getToxicity() {
+	public Double getToxicity() {
 		return Toxicity;
 	}
 
-	public void setToxicity(String toxicity) {
+	public void setToxicity(Double toxicity) {
 		Toxicity = toxicity;
+	}
+
+	public Set<Level1> getLevel1() {
+		return Level1;
+	}
+
+	public void setLevel1(Set<Level1> level1) {
+		Level1 = level1;
 	}
 
 	public Double getWater() {
