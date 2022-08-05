@@ -94,5 +94,16 @@ class Neo4jAccessApplicationTests {
 	      assertEquals(200, status);
 
 	   }
+	 @Test
+	   public void getLevelOneSecond() throws Exception {
+		 DefaultMockMvcBuilder builder = MockMvcBuilders.webAppContextSetup(this.wac);
+	        this.mvc = builder.build();
+	      String uri = "/Level0/30";
+	      MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)
+	         .accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();
+	      int status = mvcResult.getResponse().getStatus();
+	      assertEquals(200, status);
+
+	   }
 	 
 }
